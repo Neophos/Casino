@@ -240,30 +240,34 @@ int Roulette::GetRandomNumber(bool returnColor)
 
 void Roulette::Intro()
 {
-	// Ord som kan accepteras när spelaren skriver in en färg
-	Roulette::AcceptableWordsForColors = {
-		L"red",
-		L"röd",
-		L"r",
-		L"black",
-		L"svart",
-		L"s",
-		L"b"
-	};
+	//// Ord som kan accepteras när spelaren skriver in en färg
+	//Roulette::AcceptableWordsForColors = {
+	//	L"red",
+	//	L"röd",
+	//	L"r",
+	//	L"black",
+	//	L"svart",
+	//	L"s",
+	//	L"b"
+	//};
 
-	// Ord som kan accepteras när spelaren skriver in ja/nej
-	Roulette::AcceptableWordsForChoice = {
-		L"yes",
-		L"ja",
-		L"y",
-		L"j",
-		L"no",
-		L"nej",
-		L"n"
-	};
+	//// Ord som kan accepteras när spelaren skriver in ja/nej
+	//Roulette::AcceptableWordsForChoice = {
+	//	L"yes",
+	//	L"ja",
+	//	L"y",
+	//	L"j",
+	//	L"no",
+	//	L"nej",
+	//	L"n"
+	//};
 
 	Roulette::gameRunning = true;
-	Roulette::RNG().seed(std::chrono::high_resolution_clock::now().time_since_epoch().count());
+	Roulette::RNG.seed(std::chrono::high_resolution_clock::now().time_since_epoch().count());
+
+	player.money = 1000;
+
+	PrintIntro();
 }
 // Intro
 void Roulette::PrintIntro()
@@ -280,8 +284,6 @@ void Roulette::PrintIntro()
 	std::wcout << "- En färg, röd eller svart. Varje färg har en på två att bli vald." << std::endl;
 	std::wcout << "Att välja rätt siffra ger tillbaka tio gånger insatsen, rätt färg två gånger." << std::endl;
 	std::wcout << "Lycka till." << std::endl << std::endl;
-
-	player.money = 1000;
 }
 // Outro
 void Roulette::PrintOutro()

@@ -36,12 +36,11 @@ namespace Roulette
 		}
 	};
 
-	extern std::array<std::wstring, 10> AcceptableWordsForColors;
-	extern std::array<std::wstring, 7> AcceptableWordsForChoice;
+	std::array<std::wstring, 10> AcceptableWordsForColors;
+	std::array<std::wstring, 7> AcceptableWordsForChoice;
 
 	//Deklaration av alla variabler
 	PlayerData player;
-	extern bool gameRunning;
-	extern std::mt19937 RNG();
-
+	bool gameRunning;
+	std::mt19937 RNG;
 }
