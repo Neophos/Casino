@@ -269,6 +269,12 @@ void Roulette::Intro()
 
 	PrintIntro();
 }
+
+void Roulette::Outro()
+{
+	Roulette::PrintOutro();
+}
+
 // Intro
 void Roulette::PrintIntro()
 {
