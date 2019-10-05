@@ -241,26 +241,26 @@ int Roulette::GetRandomNumber(bool returnColor)
 void Roulette::Intro()
 {
 	//// Ord som kan accepteras när spelaren skriver in en färg
-	//Roulette::AcceptableWordsForColors = {
-	//	L"red",
-	//	L"röd",
-	//	L"r",
-	//	L"black",
-	//	L"svart",
-	//	L"s",
-	//	L"b"
-	//};
+	Roulette::AcceptableWordsForColors = {
+		L"red",
+		L"röd",
+		L"r",
+		L"black",
+		L"svart",
+		L"s",
+		L"b"
+	};
 
 	//// Ord som kan accepteras när spelaren skriver in ja/nej
-	//Roulette::AcceptableWordsForChoice = {
-	//	L"yes",
-	//	L"ja",
-	//	L"y",
-	//	L"j",
-	//	L"no",
-	//	L"nej",
-	//	L"n"
-	//};
+	Roulette::AcceptableWordsForChoice = {
+		L"yes",
+		L"ja",
+		L"y",
+		L"j",
+		L"no",
+		L"nej",
+		L"n"
+	};
 
 	Roulette::gameRunning = true;
 	Roulette::RNG.seed(std::chrono::high_resolution_clock::now().time_since_epoch().count());
